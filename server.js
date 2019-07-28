@@ -17,6 +17,7 @@
 |     Make sure to pass relative path from the project root.
 */
 const { Ignitor } = require("@adonisjs/ignitor");
+const path = require('path');
 const https = require('https');
 const fs = require('fs');
 
