@@ -135,7 +135,16 @@ module.exports = {
     enable: true,
     methods: ['POST', 'PUT', 'DELETE'],
     filterUris: [
-      "/user-promo"
+      "/user-promo",
+      "/auth/register",
+      "/auth/login",
+      "/auth/validate",
+      "/auth/vk",
+      "/auth/google",
+      "/auth/facebook",
+      "/auth/steam",
+      "/auth/remember",
+      "/auth/verify",
     ],
     cookieOptions: {
       httpOnly: false,

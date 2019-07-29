@@ -17,3 +17,13 @@
 const Route = use('Route')
 
 Route.post("/user-promo", "UserPromoController.create");
+
+Route.post("/auth/register", "AuthController.register");
+Route.post("/auth/login", "AuthController.login");
+Route.get("/auth/validate", "AuthController.validate");
+Route.get("/auth/vk", "AuthController.vk");
+Route.post("/auth/google", "AuthController.google");
+Route.post("/auth/facebook", "AuthController.facebook");
+Route.post("/auth/steam", "AuthController.steam");
+Route.post("/auth/remember", "AuthController.remember");
+Route.post("/auth/verify", "AuthController.verifyEmail");
