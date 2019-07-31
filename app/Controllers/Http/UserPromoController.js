@@ -19,11 +19,11 @@ class UserPromoController {
       let { code } = request.all();
       let user = await auth.getUser();
 
-      if (user.fingerprint) {
-        let fingerDoubleUsers = await Redis.scard(user.fingerprint);
-        if (fingerDoubleUsers > 2)
-          throw new Error("Активация невозможна <br/> Причина: мультиакаунт");
-      }
+      // if (user.fingerprint) {
+      //   let fingerDoubleUsers = await Redis.scard(user.fingerprint);
+      //   if (fingerDoubleUsers > 2)
+      //     throw new Error("Активация невозможна <br/> Причина: мультиакаунт");
+      // }
 
       let redisExistPromo = await Redis.hmget(`promos`, code);
       if (!redisExistPromo[0]) throw new Error("Промокод не найден");
